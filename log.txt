@@ -1,0 +1,730 @@
+doc/filters.texi:With this option activated frequency response of anequalizer is displayed
+doc/filters.texi:Set video stream size. Only useful if curves option is activated.
+doc/filters.texi:Set max gain that will be displayed. Only useful if curves option is activated.
+doc/filters.texi:when both are activated.
+doc/filters.texi:Mark main input as a pre-processed input and activate clean source input
+doc/filters.texi:optional second stream, activated through the @option{ppsrc} option. If
+doc/filters.texi:this value filter algorithm for connecting components is activated.
+doc/filters.texi:activated. Default is @code{0}.
+doc/encoders.texi:Set bit rate in bits/s. Setting this automatically activates constant bit rate
+doc/ffmpeg.texi:On pass 1, you may just deactivate audio and set output to null,
+doc/ffmpeg.texi:Note that you must activate the right video source and channel before
+grep: doc/examples/filtering_video: binary file matches
+grep: doc/examples/filtering_audio: binary file matches
+grep: doc/examples/filtering_audio.o: binary file matches
+grep: doc/examples/filtering_video.o: binary file matches
+grep: doc/examples/transcoding.o: binary file matches
+grep: doc/examples/transcoding: binary file matches
+doc/filter_design.txt:    input pad. It does not apply to the activate() callback.
+doc/filter_design.txt:  request_frame() callbacks and the other using the activate() callback.
+doc/filter_design.txt:  using activate().
+doc/filter_design.txt:  activate
+doc/filter_design.txt:    The typical task of an activate callback is to first check the backward
+doc/filter_design.txt:    For filters that do not use the activate() callback, this method is
+doc/filter_design.txt:    For filters that do not use the activate() callback, this method is
+doc/Doxyfile:# to select a filter and <Enter> or <escape> to activate or cancel the filter
+grep: ffmpeg_g: binary file matches
+grep: ffplay: binary file matches
+grep: ffplay_g: binary file matches
+grep: ffprobe_g: binary file matches
+grep: fftools/ffmpeg_hw.o: binary file matches
+fftools/ffplay.c:           "s                   activate frame-step mode\n"
+grep: fftools/ffmpeg.o: binary file matches
+grep: fftools/ffplay.o: binary file matches
+grep: fftools/ffmpeg_opt.o: binary file matches
+grep: fftools/ffmpeg_filter.o: binary file matches
+grep: fftools/cmdutils.o: binary file matches
+libavcodec/libspeexenc.c: *     implicitly activated when encoding in VBR, so the option is only useful
+libavcodec/libspeexenc.c:        s->vad = 1; /* VAD is always implicitly activated for VBR */
+libavcodec/libspeexenc.c:    /* VAD is activated with VBR or can be turned on by itself */
+libavcodec/mf_utils.c:    IMFActivate **activate;
+libavcodec/mf_utils.c:    UINT32 num_activate;
+libavcodec/mf_utils.c:    hr = ff_MFTEnumEx(category, flags, in_type, out_type, &activate,
+libavcodec/mf_utils.c:                      &num_activate);
+libavcodec/mf_utils.c:        if (!num_activate)
+libavcodec/mf_utils.c:        for (n = 0; n < num_activate; n++) {
+libavcodec/mf_utils.c:            ff_attributes_dump(log, (IMFAttributes *)activate[n]);
+libavcodec/mf_utils.c:    for (n = 0; n < num_activate; n++) {
+libavcodec/mf_utils.c:            av_log(log, AV_LOG_VERBOSE, "activate MFT %d\n", n);
+libavcodec/mf_utils.c:        hr = IMFActivate_ActivateObject(activate[n], &IID_IMFTransform,
+libavcodec/mf_utils.c:            winner = activate[n];
+libavcodec/mf_utils.c:    for (n = 0; n < num_activate; n++)
+libavcodec/mf_utils.c:       IMFActivate_Release(activate[n]);
+libavcodec/mf_utils.c:    CoTaskMemFree(activate);
+libavcodec/htmlsubtitles.c:     * binary state markers. Basically, "<b>" will activate bold, and "</b>"
+libavcodec/htmlsubtitles.c:     * will deactivate it, whatever the current state.
+libavcodec/wma.c:     * be activated */
+grep: libavdevice/fbdev_dec.o: binary file matches
+grep: libavdevice/fbdev_enc.o: binary file matches
+grep: libavdevice/fbdev_common.o: binary file matches
+grep: libavdevice/libavdevice.so.58: binary file matches
+grep: libavdevice/lavfi.o: binary file matches
+libavdevice/jack.c:    int             activated;
+libavdevice/jack.c:        if (self->activated)
+libavdevice/jack.c:            jack_deactivate(self->client);
+libavdevice/jack.c:     * If we activate it in audio_read_header(), we're actually reading audio data
+libavdevice/jack.c:    if (!self->activated) {
+libavdevice/jack.c:        if (!jack_activate(self->client)) {
+libavdevice/jack.c:            self->activated = 1;
+libavdevice/jack.c:                   "JACK client registered and activated (rate=%dHz, buffer_size=%d frames)\n",
+libavdevice/jack.c:            av_log(context, AV_LOG_ERROR, "Unable to activate JACK client\n");
+grep: libavdevice/libavdevice.a: binary file matches
+grep: libavfilter/f_drawgraph.o: binary file matches
+grep: libavfilter/af_pan.o: binary file matches
+grep: libavfilter/allfilters.o: binary file matches
+grep: libavfilter/af_alimiter.o: binary file matches
+grep: libavfilter/f_streamselect.o: binary file matches
+grep: libavfilter/vf_weave.o: binary file matches
+grep: libavfilter/f_graphmonitor.o: binary file matches
+grep: libavfilter/af_astats.o: binary file matches
+grep: libavfilter/vf_blend.o: binary file matches
+libavfilter/f_streamselect.c:static int activate(AVFilterContext *ctx)
+libavfilter/f_streamselect.c:    return ff_framesync_activate(&s->fs);
+libavfilter/f_streamselect.c:    .activate        = activate,
+libavfilter/f_streamselect.c:    .activate        = activate,
+grep: libavfilter/vf_mestimate.o: binary file matches
+grep: libavfilter/vf_hwmap.o: binary file matches
+grep: libavfilter/af_asupercut.o: binary file matches
+grep: libavfilter/vsrc_mandelbrot.o: binary file matches
+grep: libavfilter/vf_framepack.o: binary file matches
+libavfilter/vf_identity.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_identity.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_identity.c:    .activate      = activate,
+libavfilter/vf_identity.c:    .activate      = activate,
+grep: libavfilter/vf_cropdetect.o: binary file matches
+libavfilter/f_graphmonitor.c:static int activate(AVFilterContext *ctx)
+libavfilter/f_graphmonitor.c:    .activate      = activate,
+libavfilter/f_graphmonitor.c:    .activate      = activate,
+grep: libavfilter/vf_photosensitivity.o: binary file matches
+grep: libavfilter/vf_extractplanes.o: binary file matches
+libavfilter/avfilter.c:    av_assert1(!link->dst->filter->activate);
+libavfilter/avfilter.c:static int ff_filter_activate_default(AVFilterContext *filter)
+libavfilter/avfilter.c:   When a filter is activated, it must:
+libavfilter/avfilter.c:     frame_wanted_out is not set, then the filter can be activated. If that
+libavfilter/avfilter.c:   Filters are activated according to the ready field, set using the
+libavfilter/avfilter.c:   - buffersrc: activate if frame_wanted_out to notify the application;
+libavfilter/avfilter.c:     activate when the application adds a frame to push it immediately.
+libavfilter/avfilter.c:   - testsrc: activate only if frame_wanted_out to produce and push a frame.
+libavfilter/avfilter.c:   In order to activate a filter implementing the legacy filter_frame() and
+libavfilter/avfilter.c:int ff_filter_activate(AVFilterContext *filter)
+libavfilter/avfilter.c:                 filter->filter->activate));
+libavfilter/avfilter.c:    ret = filter->filter->activate ? filter->filter->activate(filter) :
+libavfilter/avfilter.c:          ff_filter_activate_default(filter);
+grep: libavfilter/vf_eq.o: binary file matches
+grep: libavfilter/vf_tinterlace.o: binary file matches
+grep: libavfilter/vaf_spectrumsynth.o: binary file matches
+grep: libavfilter/asrc_sine.o: binary file matches
+libavfilter/af_sidechaincompress.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_sidechaincompress.c:    .activate       = activate,
+grep: libavfilter/vf_delogo.o: binary file matches
+grep: libavfilter/vf_lenscorrection.o: binary file matches
+grep: libavfilter/vf_shear.o: binary file matches
+grep: libavfilter/af_acontrast.o: binary file matches
+grep: libavfilter/asrc_afirsrc.o: binary file matches
+grep: libavfilter/vf_colorize.o: binary file matches
+libavfilter/vf_dnn_processing.c:static int activate_sync(AVFilterContext *filter_ctx)
+libavfilter/vf_dnn_processing.c:static int activate_async(AVFilterContext *filter_ctx)
+libavfilter/vf_dnn_processing.c:static int activate(AVFilterContext *filter_ctx)
+libavfilter/vf_dnn_processing.c:        return activate_async(filter_ctx);
+libavfilter/vf_dnn_processing.c:        return activate_sync(filter_ctx);
+libavfilter/vf_dnn_processing.c:    .activate      = activate,
+grep: libavfilter/avf_aphasemeter.o: binary file matches
+libavfilter/af_join.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_join.c:    .activate       = activate,
+grep: libavfilter/settb.o: binary file matches
+libavfilter/asrc_anoisesrc.c:static int activate(AVFilterContext *ctx)
+libavfilter/asrc_anoisesrc.c:    .activate      = activate,
+grep: libavfilter/vf_removegrain.o: binary file matches
+grep: libavfilter/vf_vif.o: binary file matches
+grep: libavfilter/af_flanger.o: binary file matches
+grep: libavfilter/af_volumedetect.o: binary file matches
+libavfilter/f_loop.c:static int aactivate(AVFilterContext *ctx)
+libavfilter/f_loop.c:    .activate      = aactivate,
+libavfilter/f_loop.c:static int activate(AVFilterContext *ctx)
+libavfilter/f_loop.c:    .activate    = activate,
+grep: libavfilter/vf_signalstats.o: binary file matches
+grep: libavfilter/af_anlmdn.o: binary file matches
+grep: libavfilter/af_aderivative.o: binary file matches
+grep: libavfilter/vf_separatefields.o: binary file matches
+grep: libavfilter/vf_neighbor.o: binary file matches
+libavfilter/af_amultiply.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_amultiply.c:    .activate       = activate,
+grep: libavfilter/avf_showfreqs.o: binary file matches
+libavfilter/vf_xfade.c:static int xfade_activate(AVFilterContext *ctx)
+libavfilter/vf_xfade.c:    .activate      = xfade_activate,
+grep: libavfilter/vf_fieldmatch.o: binary file matches
+libavfilter/vf_decimate.c:    { "ppsrc",     "mark main input as a pre-processed input and activate clean source input stream", OFFSET(ppsrc), AV_OPT_TYPE_BOOL, {.i64=0}, 0, 1, FLAGS },
+libavfilter/vf_decimate.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_decimate.c:    .activate      = activate,
+libavfilter/vf_untile.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_untile.c:    .activate      = activate,
+grep: libavfilter/vf_datascope.o: binary file matches
+grep: libavfilter/vf_cover_rect.o: binary file matches
+libavfilter/af_ladspa.c:        if (s->desc->activate)
+libavfilter/af_ladspa.c:            s->desc->activate(s->handles[i]);
+libavfilter/af_ladspa.c:        if (s->desc->deactivate)
+libavfilter/af_ladspa.c:            s->desc->deactivate(s->handles[i]);
+grep: libavfilter/vf_normalize.o: binary file matches
+grep: libavfilter/vf_nlmeans.o: binary file matches
+grep: libavfilter/vf_pixdesctest.o: binary file matches
+grep: libavfilter/vf_despill.o: binary file matches
+grep: libavfilter/af_superequalizer.o: binary file matches
+grep: libavfilter/vf_edgedetect.o: binary file matches
+grep: libavfilter/af_atempo.o: binary file matches
+libavfilter/vf_convolve.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_convolve.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_convolve.c:    .activate      = activate,
+libavfilter/vf_convolve.c:    .activate      = activate,
+grep: libavfilter/vf_setparams.o: binary file matches
+grep: libavfilter/vf_maskedclamp.o: binary file matches
+grep: libavfilter/af_stereotools.o: binary file matches
+grep: libavfilter/vf_il.o: binary file matches
+grep: libavfilter/vf_hwupload.o: binary file matches
+grep: libavfilter/vf_shuffleframes.o: binary file matches
+grep: libavfilter/vf_lagfun.o: binary file matches
+grep: libavfilter/vf_threshold.o: binary file matches
+grep: libavfilter/af_acrossover.o: binary file matches
+grep: libavfilter/vf_drawbox.o: binary file matches
+grep: libavfilter/vf_vectorscope.o: binary file matches
+libavfilter/vf_vif.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_vif.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_vif.c:    .activate      = activate,
+grep: libavfilter/vf_waveform.o: binary file matches
+grep: libavfilter/vf_chromashift.o: binary file matches
+grep: libavfilter/vf_psnr.o: binary file matches
+grep: libavfilter/vf_lut3d.o: binary file matches
+grep: libavfilter/vf_xmedian.o: binary file matches
+libavfilter/vf_framerate.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_framerate.c:    .activate      = activate,
+grep: libavfilter/af_asetrate.o: binary file matches
+grep: libavfilter/avf_showwaves.o: binary file matches
+grep: libavfilter/avf_showspectrum.o: binary file matches
+grep: libavfilter/graphparser.o: binary file matches
+grep: libavfilter/avf_showcqt.o: binary file matches
+grep: libavfilter/vf_framestep.o: binary file matches
+grep: libavfilter/vf_uspp.o: binary file matches
+libavfilter/vf_framepack.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_framepack.c:    .activate      = activate,
+grep: libavfilter/vf_yaepblur.o: binary file matches
+grep: libavfilter/af_apad.o: binary file matches
+grep: libavfilter/vf_colorcorrect.o: binary file matches
+libavfilter/vf_remap.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_remap.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_remap.c:    .activate      = activate,
+grep: libavfilter/af_stereowiden.o: binary file matches
+grep: libavfilter/f_sidedata.o: binary file matches
+libavfilter/framesync.h: * callback, then call ff_framesync_activate() from the filter's activate
+libavfilter/framesync.h: * This function can be the complete implementation of the activate
+libavfilter/framesync.h:int ff_framesync_activate(FFFrameSync *fs);
+grep: libavfilter/vf_entropy.o: binary file matches
+grep: libavfilter/vf_aspect.o: binary file matches
+grep: libavfilter/vf_spp.o: binary file matches
+grep: libavfilter/vf_smartblur.o: binary file matches
+grep: libavfilter/vf_convolve.o: binary file matches
+grep: libavfilter/vf_bilateral.o: binary file matches
+grep: libavfilter/vf_gblur.o: binary file matches
+grep: libavfilter/vf_swaprect.o: binary file matches
+grep: libavfilter/vf_geq.o: binary file matches
+grep: libavfilter/vsrc_cellauto.o: binary file matches
+grep: libavfilter/vf_xbr.o: binary file matches
+libavfilter/avf_showfreqs.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_showfreqs.c:    .activate      = activate,
+grep: libavfilter/vf_overlay.o: binary file matches
+libavfilter/vf_xmedian.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_xmedian.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_xmedian.c:    .activate      = activate,
+grep: libavfilter/vf_gradfun.o: binary file matches
+grep: libavfilter/vf_signature.o: binary file matches
+grep: libavfilter/graphdump.o: binary file matches
+grep: libavfilter/vf_lut2.o: binary file matches
+grep: libavfilter/vf_scroll.o: binary file matches
+grep: libavfilter/vf_tile.o: binary file matches
+grep: libavfilter/af_aformat.o: binary file matches
+grep: libavfilter/vf_xfade.o: binary file matches
+grep: libavfilter/af_headphone.o: binary file matches
+grep: libavfilter/vf_unsharp.o: binary file matches
+grep: libavfilter/af_aecho.o: binary file matches
+grep: libavfilter/af_apulsator.o: binary file matches
+grep: libavfilter/libavfilter.so.7: binary file matches
+grep: libavfilter/vf_selectivecolor.o: binary file matches
+libavfilter/framesync.c:int ff_framesync_activate(FFFrameSync *fs)
+grep: libavfilter/af_amultiply.o: binary file matches
+grep: libavfilter/f_select.o: binary file matches
+grep: libavfilter/af_silenceremove.o: binary file matches
+grep: libavfilter/vf_showpalette.o: binary file matches
+grep: libavfilter/vf_tpad.o: binary file matches
+grep: libavfilter/af_firequalizer.o: binary file matches
+grep: libavfilter/vf_rotate.o: binary file matches
+grep: libavfilter/vf_detelecine.o: binary file matches
+grep: libavfilter/vf_deshake.o: binary file matches
+libavfilter/af_adelay.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_adelay.c:    .activate      = activate,
+grep: libavfilter/vf_codecview.o: binary file matches
+libavfilter/vf_maskedmerge.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_maskedmerge.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_maskedmerge.c:    .activate      = activate,
+grep: libavfilter/vf_showinfo.o: binary file matches
+grep: libavfilter/vsrc_gradients.o: binary file matches
+grep: libavfilter/vf_maskedminmax.o: binary file matches
+grep: libavfilter/vf_colorbalance.o: binary file matches
+grep: libavfilter/asrc_anoisesrc.o: binary file matches
+grep: libavfilter/dnn_filter_common.o: binary file matches
+grep: libavfilter/vf_fps.o: binary file matches
+grep: libavfilter/vf_premultiply.o: binary file matches
+grep: libavfilter/vf_w3fdif.o: binary file matches
+grep: libavfilter/vf_estdif.o: binary file matches
+grep: libavfilter/vsrc_testsrc.o: binary file matches
+grep: libavfilter/af_adeclick.o: binary file matches
+grep: libavfilter/vf_scale.o: binary file matches
+libavfilter/af_agate.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_agate.c:    .activate       = activate,
+grep: libavfilter/vf_blackdetect.o: binary file matches
+grep: libavfilter/vf_curves.o: binary file matches
+grep: libavfilter/vf_mpdecimate.o: binary file matches
+grep: libavfilter/vf_hwdownload.o: binary file matches
+grep: libavfilter/vf_histeq.o: binary file matches
+grep: libavfilter/vf_ciescope.o: binary file matches
+libavfilter/vf_fieldmatch.c:    { "ppsrc", "mark main input as a pre-processed input and activate clean source input stream", OFFSET(ppsrc), AV_OPT_TYPE_BOOL, {.i64=0}, 0, 1, FLAGS },
+libavfilter/vf_fieldmatch.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_fieldmatch.c:    .activate       = activate,
+grep: libavfilter/af_anull.o: binary file matches
+grep: libavfilter/vf_random.o: binary file matches
+libavfilter/vf_overlay.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_overlay.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_overlay.c:    .activate      = activate,
+grep: libavfilter/vsrc_sierpinski.o: binary file matches
+grep: libavfilter/af_loudnorm.o: binary file matches
+grep: libavfilter/af_amerge.o: binary file matches
+libavfilter/af_amix.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_amix.c:    .activate       = activate,
+grep: libavfilter/vf_owdenoise.o: binary file matches
+grep: libavfilter/af_replaygain.o: binary file matches
+grep: libavfilter/vf_boxblur.o: binary file matches
+grep: libavfilter/af_deesser.o: binary file matches
+libavfilter/vf_maskedminmax.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_maskedminmax.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_maskedminmax.c:    .activate      = activate,
+libavfilter/vf_maskedminmax.c:    .activate      = activate,
+grep: libavfilter/scale_eval.o: binary file matches
+grep: libavfilter/af_afade.o: binary file matches
+libavfilter/af_surround.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_surround.c:    .activate       = activate,
+grep: libavfilter/vf_bm3d.o: binary file matches
+grep: libavfilter/.af_amix.c.swp: binary file matches
+libavfilter/vf_tpad.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_tpad.c:    .activate      = activate,
+grep: libavfilter/vf_maskedthreshold.o: binary file matches
+grep: libavfilter/vf_atadenoise.o: binary file matches
+grep: libavfilter/vf_identity.o: binary file matches
+grep: libavfilter/af_dcshift.o: binary file matches
+grep: libavfilter/vf_colormatrix.o: binary file matches
+grep: libavfilter/vf_repeatfields.o: binary file matches
+grep: libavfilter/af_aemphasis.o: binary file matches
+grep: libavfilter/vf_stereo3d.o: binary file matches
+grep: libavfilter/af_drmeter.o: binary file matches
+grep: libavfilter/vf_fftfilt.o: binary file matches
+grep: libavfilter/af_haas.o: binary file matches
+grep: libavfilter/af_earwax.o: binary file matches
+grep: libavfilter/vf_colorchannelmixer.o: binary file matches
+libavfilter/vf_freezedetect.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_freezedetect.c:    .activate      = activate,
+grep: libavfilter/vf_colorlevels.o: binary file matches
+grep: libavfilter/vf_thumbnail.o: binary file matches
+libavfilter/vf_hysteresis.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_hysteresis.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_hysteresis.c:    .activate      = activate,
+grep: libavfilter/vf_histogram.o: binary file matches
+grep: libavfilter/vf_mcdeint.o: binary file matches
+libavfilter/vf_dedot.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_dedot.c:    .activate      = activate,
+libavfilter/af_afir.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_afir.c:    .activate      = activate,
+libavfilter/avf_ahistogram.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_ahistogram.c:    .activate      = activate,
+grep: libavfilter/asrc_anullsrc.o: binary file matches
+grep: libavfilter/vf_avgblur.o: binary file matches
+grep: libavfilter/af_acopy.o: binary file matches
+grep: libavfilter/vf_lumakey.o: binary file matches
+grep: libavfilter/vf_freezeframes.o: binary file matches
+libavfilter/af_speechnorm.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_speechnorm.c:    .activate        = activate,
+grep: libavfilter/vf_v360.o: binary file matches
+grep: libavfilter/vf_transpose.o: binary file matches
+libavfilter/avf_avectorscope.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_avectorscope.c:    .activate      = activate,
+libavfilter/af_headphone.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_headphone.c:    .activate      = activate,
+grep: libavfilter/f_sendcmd.o: binary file matches
+libavfilter/buffersink.c:static int activate(AVFilterContext *ctx)
+libavfilter/buffersink.c:    av_assert0(ctx->filter->activate == activate); \
+libavfilter/buffersink.c:    .activate      = activate,
+libavfilter/buffersink.c:    .activate      = activate,
+grep: libavfilter/f_reverse.o: binary file matches
+grep: libavfilter/af_asoftclip.o: binary file matches
+grep: libavfilter/vf_chromakey.o: binary file matches
+grep: libavfilter/vf_blackframe.o: binary file matches
+grep: libavfilter/vf_fade.o: binary file matches
+grep: libavfilter/x86/vf_yadif_init.o: binary file matches
+grep: libavfilter/x86/avf_showcqt_init.o: binary file matches
+grep: libavfilter/x86/vf_v360_init.o: binary file matches
+grep: libavfilter/x86/vf_overlay_init.o: binary file matches
+grep: libavfilter/x86/vf_threshold_init.o: binary file matches
+grep: libavfilter/x86/vf_maskedmerge_init.o: binary file matches
+grep: libavfilter/x86/vf_bwdif_init.o: binary file matches
+libavfilter/vf_blend.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_blend.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_blend.c:    .activate      = activate,
+grep: libavfilter/vf_shuffleplanes.o: binary file matches
+grep: libavfilter/vsrc_mptestsrc.o: binary file matches
+libavfilter/avf_showspectrum.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_showspectrum.c:    .activate      = activate,
+grep: libavfilter/vf_fspp.o: binary file matches
+grep: libavfilter/vf_lut.o: binary file matches
+grep: libavfilter/vf_crop.o: binary file matches
+libavfilter/vf_xfade_opencl.c:static int xfade_opencl_activate(AVFilterContext *avctx)
+libavfilter/vf_xfade_opencl.c:    .activate        = &xfade_opencl_activate,
+libavfilter/vf_program_opencl.c:static int program_opencl_activate(AVFilterContext *avctx)
+libavfilter/vf_program_opencl.c:    return ff_framesync_activate(&ctx->fs);
+libavfilter/vf_program_opencl.c:    .activate       = &program_opencl_activate,
+grep: libavfilter/vf_qp.o: binary file matches
+grep: libavfilter/vf_colortemperature.o: binary file matches
+grep: libavfilter/f_perms.o: binary file matches
+grep: libavfilter/af_amix.o: binary file matches
+grep: libavfilter/af_volume.o: binary file matches
+grep: libavfilter/vf_colorconstancy.o: binary file matches
+libavfilter/af_asetnsamples.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_asetnsamples.c:    .activate    = activate,
+grep: libavfilter/vf_kerndeint.o: binary file matches
+libavfilter/af_afftdn.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_afftdn.c:    .activate        = activate,
+grep: libavfilter/af_adenorm.o: binary file matches
+grep: libavfilter/vf_midequalizer.o: binary file matches
+libavfilter/af_afade.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_afade.c:    .activate      = activate,
+grep: libavfilter/asrc_hilbert.o: binary file matches
+grep: libavfilter/vf_colorkey.o: binary file matches
+grep: libavfilter/af_afftdn.o: binary file matches
+grep: libavfilter/vf_shufflepixels.o: binary file matches
+grep: libavfilter/vf_limiter.o: binary file matches
+grep: libavfilter/vf_decimate.o: binary file matches
+grep: libavfilter/af_channelsplit.o: binary file matches
+grep: libavfilter/vf_find_rect.o: binary file matches
+libavfilter/vf_mix.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_mix.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_mix.c:    .activate      = activate,
+grep: libavfilter/af_crystalizer.o: binary file matches
+libavfilter/vf_zoompan.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_zoompan.c:    .activate      = activate,
+libavfilter/avf_concat.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_concat.c:    .activate      = activate,
+libavfilter/settb.c:static int activate(AVFilterContext *ctx)
+libavfilter/settb.c:    .activate    = activate,
+libavfilter/settb.c:    .activate    = activate,
+grep: libavfilter/vf_perspective.o: binary file matches
+grep: libavfilter/af_biquads.o: binary file matches
+libavfilter/f_interleave.c:static int activate(AVFilterContext *ctx)
+libavfilter/f_interleave.c:    .activate    = activate,
+libavfilter/f_interleave.c:    .activate    = activate,
+libavfilter/vsrc_gradients.c:static int activate(AVFilterContext *ctx)
+libavfilter/vsrc_gradients.c:    .activate      = activate,
+libavfilter/vf_overlay_opencl.c:static int overlay_opencl_activate(AVFilterContext *avctx)
+libavfilter/vf_overlay_opencl.c:    return ff_framesync_activate(&ctx->fs);
+libavfilter/vf_overlay_opencl.c:    .activate        = &overlay_opencl_activate,
+grep: libavfilter/vf_floodfill.o: binary file matches
+grep: libavfilter/vf_yadif.o: binary file matches
+grep: libavfilter/vf_tonemap.o: binary file matches
+grep: libavfilter/vf_dedot.o: binary file matches
+grep: libavfilter/vf_fieldorder.o: binary file matches
+grep: libavfilter/vf_pad.o: binary file matches
+libavfilter/vf_separatefields.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_separatefields.c:    .activate    = activate,
+grep: libavfilter/af_afir.o: binary file matches
+grep: libavfilter/vf_zoompan.o: binary file matches
+grep: libavfilter/af_surround.o: binary file matches
+grep: libavfilter/setpts.o: binary file matches
+grep: libavfilter/af_agate.o: binary file matches
+grep: libavfilter/af_anequalizer.o: binary file matches
+grep: libavfilter/vf_fieldhint.o: binary file matches
+libavfilter/asrc_anullsrc.c:static int activate(AVFilterContext *ctx)
+libavfilter/asrc_anullsrc.c:    .activate      = activate,
+grep: libavfilter/f_interleave.o: binary file matches
+grep: libavfilter/af_channelmap.o: binary file matches
+grep: libavfilter/src_movie.o: binary file matches
+grep: libavfilter/vf_nnedi.o: binary file matches
+grep: libavfilter/framesync.o: binary file matches
+grep: libavfilter/boxblur.o: binary file matches
+libavfilter/vf_fps.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_fps.c:    .activate    = activate,
+grep: libavfilter/af_aexciter.o: binary file matches
+grep: libavfilter/vf_fftdnoiz.o: binary file matches
+grep: libavfilter/f_loop.o: binary file matches
+libavfilter/vf_alphamerge.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_alphamerge.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_alphamerge.c:    .activate       = activate,
+grep: libavfilter/formats.o: binary file matches
+grep: libavfilter/vf_hqdn3d.o: binary file matches
+grep: libavfilter/vf_vmafmotion.o: binary file matches
+grep: libavfilter/pthread.o: binary file matches
+grep: libavfilter/af_aresample.o: binary file matches
+grep: libavfilter/af_ashowinfo.o: binary file matches
+grep: libavfilter/fifo.o: binary file matches
+grep: libavfilter/vf_maskedmerge.o: binary file matches
+grep: libavfilter/vf_untile.o: binary file matches
+grep: libavfilter/f_bench.o: binary file matches
+grep: libavfilter/af_aiir.o: binary file matches
+grep: libavfilter/f_realtime.o: binary file matches
+grep: libavfilter/vf_bitplanenoise.o: binary file matches
+grep: libavfilter/vf_telecine.o: binary file matches
+grep: libavfilter/af_anlms.o: binary file matches
+grep: libavfilter/vf_readeia608.o: binary file matches
+grep: libavfilter/vf_scdet.o: binary file matches
+libavfilter/vf_paletteuse.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_paletteuse.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_paletteuse.c:    .activate      = activate,
+libavfilter/af_axcorrelate.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_axcorrelate.c:    .activate       = activate,
+grep: libavfilter/vf_deflicker.o: binary file matches
+grep: libavfilter/vf_deband.o: binary file matches
+grep: libavfilter/af_chorus.o: binary file matches
+grep: libavfilter/vf_removelogo.o: binary file matches
+grep: libavfilter/af_asetnsamples.o: binary file matches
+grep: libavfilter/af_mcompand.o: binary file matches
+libavfilter/af_arnndn.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_arnndn.c:    .activate      = activate,
+grep: libavfilter/af_speechnorm.o: binary file matches
+libavfilter/vf_libvmaf.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_libvmaf.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_libvmaf.c:    .activate      = activate,
+grep: libavfilter/vf_dblur.o: binary file matches
+libavfilter/avfiltergraph.c:        if (oldest->dst->filter->activate) {
+libavfilter/avfiltergraph.c:            /* For now, buffersink is the only filter implementing activate. */
+libavfilter/avfiltergraph.c:    av_assert1(!oldest->dst->filter->activate);
+libavfilter/avfiltergraph.c:    return ff_filter_activate(filter);
+libavfilter/vf_threshold.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_threshold.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_threshold.c:    .activate      = activate,
+libavfilter/vf_maskedclamp.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_maskedclamp.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_maskedclamp.c:    .activate      = activate,
+grep: libavfilter/audio.o: binary file matches
+grep: libavfilter/avf_showspatial.o: binary file matches
+libavfilter/af_sofalizer.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_sofalizer.c:    .activate      = activate,
+libavfilter/vf_freezeframes.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_freezeframes.c:    .activate      = activate,
+grep: libavfilter/vf_freezedetect.o: binary file matches
+grep: libavfilter/buffersink.o: binary file matches
+grep: libavfilter/vf_copy.o: binary file matches
+grep: libavfilter/vf_amplify.o: binary file matches
+grep: libavfilter/vf_vibrance.o: binary file matches
+libavfilter/vf_maskedthreshold.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_maskedthreshold.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_maskedthreshold.c:    .activate      = activate,
+grep: libavfilter/vf_convolution.o: binary file matches
+grep: libavfilter/af_compand.o: binary file matches
+grep: libavfilter/avfilter.o: binary file matches
+grep: libavfilter/vf_sr.o: binary file matches
+grep: libavfilter/vf_alphamerge.o: binary file matches
+grep: libavfilter/vf_tmidequalizer.o: binary file matches
+grep: libavfilter/vf_noise.o: binary file matches
+libavfilter/af_adeclick.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_adeclick.c:    .activate      = activate,
+libavfilter/af_adeclick.c:    .activate      = activate,
+grep: libavfilter/split.o: binary file matches
+grep: libavfilter/vf_palettegen.o: binary file matches
+grep: libavfilter/af_asubboost.o: binary file matches
+grep: libavfilter/vf_epx.o: binary file matches
+grep: libavfilter/vf_bbox.o: binary file matches
+grep: libavfilter/asink_anullsink.o: binary file matches
+grep: libavfilter/vf_mix.o: binary file matches
+grep: libavfilter/vf_elbg.o: binary file matches
+grep: libavfilter/vf_dnn_processing.o: binary file matches
+grep: libavfilter/vf_pullup.o: binary file matches
+grep: libavfilter/vf_colorspace.o: binary file matches
+grep: libavfilter/vf_vfrdet.o: binary file matches
+libavfilter/vf_premultiply.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_premultiply.c:        return ff_framesync_activate(&s->fs);
+libavfilter/vf_premultiply.c:    .activate      = activate,
+libavfilter/vf_premultiply.c:    .activate      = activate,
+grep: libavfilter/vf_vflip.o: binary file matches
+grep: libavfilter/vf_format.o: binary file matches
+grep: libavfilter/vf_dctdnoiz.o: binary file matches
+grep: libavfilter/af_sidechaincompress.o: binary file matches
+libavfilter/af_amerge.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_amerge.c:    .activate      = activate,
+libavfilter/internal.h: * This function must not be used by filters using the activate callback,
+libavfilter/internal.h:int ff_filter_activate(AVFilterContext *filter);
+grep: libavfilter/vf_deblock.o: binary file matches
+grep: libavfilter/vf_minterpolate.o: binary file matches
+libavfilter/filters.h: * Special return code when activate() did not do anything.
+libavfilter/filters.h: * Filters implementing the activate callback can call it directly to
+libavfilter/filters.h: * Filters implementing the activate callback should call this function when
+grep: libavfilter/vf_sab.o: binary file matches
+grep: libavfilter/vsrc_life.o: binary file matches
+libavfilter/af_afftfilt.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_afftfilt.c:    .activate        = activate,
+grep: libavfilter/avf_ahistogram.o: binary file matches
+libavfilter/vf_bm3d.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_bm3d.c:        return ff_framesync_activate(&s->fs);
+libavfilter/vf_bm3d.c:    .activate      = activate,
+libavfilter/vf_psnr.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_psnr.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_psnr.c:    .activate      = activate,
+grep: libavfilter/af_afftfilt.o: binary file matches
+libavfilter/vf_overlay_qsv.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_overlay_qsv.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_overlay_qsv.c:    .activate       = activate,
+grep: libavfilter/vf_hqx.o: binary file matches
+grep: libavfilter/vf_remap.o: binary file matches
+libavfilter/af_aecho.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_aecho.c:    .activate      = activate,
+grep: libavfilter/af_acrusher.o: binary file matches
+grep: libavfilter/vf_phase.o: binary file matches
+grep: libavfilter/avf_showvolume.o: binary file matches
+grep: libavfilter/vf_hflip.o: binary file matches
+libavfilter/af_dynaudnorm.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_dynaudnorm.c:    .activate      = activate,
+grep: libavfilter/af_tremolo.o: binary file matches
+grep: libavfilter/vf_fillborders.o: binary file matches
+grep: libavfilter/libavfilter.a: binary file matches
+libavfilter/vf_overlay_cuda.c:static int overlay_cuda_activate(AVFilterContext *avctx)
+libavfilter/vf_overlay_cuda.c:    return ff_framesync_activate(&ctx->fs);
+libavfilter/vf_overlay_cuda.c:    .activate        = &overlay_cuda_activate,
+libavfilter/avf_abitscope.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_abitscope.c:    .activate      = activate,
+grep: libavfilter/af_compensationdelay.o: binary file matches
+libavfilter/vf_lut3d.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_lut3d.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_lut3d.c:    .activate      = activate,
+grep: libavfilter/af_aphaser.o: binary file matches
+grep: libavfilter/vf_framerate.o: binary file matches
+grep: libavfilter/dnn/dnn_interface.o: binary file matches
+grep: libavfilter/dnn/dnn_backend_native.o: binary file matches
+libavfilter/vf_stack.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_stack.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_stack.c:    .activate      = activate,
+libavfilter/vf_stack.c:    .activate      = activate,
+libavfilter/vf_stack.c:    .activate      = activate,
+grep: libavfilter/af_silencedetect.o: binary file matches
+grep: libavfilter/vf_super2xsai.o: binary file matches
+libavfilter/vf_midequalizer.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_midequalizer.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_midequalizer.c:    .activate      = activate,
+grep: libavfilter/vf_maskfun.o: binary file matches
+grep: libavfilter/vf_ssim.o: binary file matches
+grep: libavfilter/vf_pp.o: binary file matches
+grep: libavfilter/vf_mergeplanes.o: binary file matches
+grep: libavfilter/vf_vaguedenoiser.o: binary file matches
+grep: libavfilter/af_afreqshift.o: binary file matches
+libavfilter/vaf_spectrumsynth.c:static int activate(AVFilterContext *ctx)
+libavfilter/vaf_spectrumsynth.c:    .activate      = activate,
+grep: libavfilter/vf_addroi.o: binary file matches
+libavfilter/af_rubberband.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_rubberband.c:    .activate      = activate,
+libavfilter/vf_mergeplanes.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_mergeplanes.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_mergeplanes.c:    .activate      = activate,
+grep: libavfilter/trim.o: binary file matches
+grep: libavfilter/vf_swapuv.o: binary file matches
+libavfilter/setpts.c:static int activate(AVFilterContext *ctx)
+libavfilter/setpts.c:    .activate  = activate,
+libavfilter/setpts.c:    .activate    = activate,
+libavfilter/f_cue.c:static int activate(AVFilterContext *ctx)
+libavfilter/f_cue.c:    .activate    = activate,
+libavfilter/f_cue.c:    .activate    = activate,
+grep: libavfilter/vf_stack.o: binary file matches
+grep: libavfilter/vf_colorcontrast.o: binary file matches
+grep: libavfilter/avf_concat.o: binary file matches
+libavfilter/vf_ssim.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_ssim.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_ssim.c:    .activate      = activate,
+grep: libavfilter/vf_monochrome.o: binary file matches
+grep: libavfilter/vf_dejudder.o: binary file matches
+grep: libavfilter/vf_pp7.o: binary file matches
+grep: libavfilter/af_vibrato.o: binary file matches
+libavfilter/af_anlms.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_anlms.c:    .activate       = activate,
+grep: libavfilter/af_axcorrelate.o: binary file matches
+grep: libavfilter/vf_pseudocolor.o: binary file matches
+grep: libavfilter/af_adelay.o: binary file matches
+grep: libavfilter/af_dynaudnorm.o: binary file matches
+grep: libavfilter/vf_vignette.o: binary file matches
+libavfilter/af_superequalizer.c:static int activate(AVFilterContext *ctx)
+libavfilter/af_superequalizer.c:    .activate      = activate,
+grep: libavfilter/f_ebur128.o: binary file matches
+grep: libavfilter/avfiltergraph.o: binary file matches
+grep: libavfilter/vf_null.o: binary file matches
+libavfilter/avfilter.h:    int (*activate)(AVFilterContext *ctx);
+libavfilter/vsrc_testsrc.c:static int activate(AVFilterContext *ctx)
+libavfilter/vsrc_testsrc.c:    .activate        = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate    = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+libavfilter/vsrc_testsrc.c:    .activate      = activate,
+grep: libavfilter/af_extrastereo.o: binary file matches
+libavfilter/avf_showwaves.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_showwaves.c:    .activate      = activate,
+grep: libavfilter/af_hdcd.o: binary file matches
+grep: libavfilter/f_cue.o: binary file matches
+grep: libavfilter/vf_chromanr.o: binary file matches
+grep: libavfilter/video.o: binary file matches
+libavfilter/vf_displace.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_displace.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_displace.c:    .activate      = activate,
+grep: libavfilter/af_crossfeed.o: binary file matches
+grep: libavfilter/vf_readvitc.o: binary file matches
+grep: libavfilter/avf_avectorscope.o: binary file matches
+grep: libavfilter/vf_hysteresis.o: binary file matches
+grep: libavfilter/f_metadata.o: binary file matches
+grep: libavfilter/vf_idet.o: binary file matches
+grep: libavfilter/vsink_nullsink.o: binary file matches
+libavfilter/vf_scdet.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_scdet.c:    .activate      = activate,
+libavfilter/vf_deshake_opencl.c:    // These variables are used in the activate callback
+libavfilter/vf_deshake_opencl.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_deshake_opencl.c:    .activate       = activate,
+libavfilter/avf_showspatial.c:static int spatial_activate(AVFilterContext *ctx)
+libavfilter/avf_showspatial.c:    .activate      = spatial_activate,
+grep: libavfilter/af_arnndn.o: binary file matches
+grep: libavfilter/vf_derain.o: binary file matches
+grep: libavfilter/vf_cas.o: binary file matches
+grep: libavfilter/avf_abitscope.o: binary file matches
+grep: libavfilter/vf_field.o: binary file matches
+grep: libavfilter/af_join.o: binary file matches
+libavfilter/vf_overlay_vulkan.c:static int overlay_vulkan_activate(AVFilterContext *avctx)
+libavfilter/vf_overlay_vulkan.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_overlay_vulkan.c:    .activate       = &overlay_vulkan_activate,
+grep: libavfilter/vf_hue.o: binary file matches
+grep: libavfilter/buffersrc.o: binary file matches
+grep: libavfilter/vf_paletteuse.o: binary file matches
+grep: libavfilter/vf_exposure.o: binary file matches
+grep: libavfilter/vf_bwdif.o: binary file matches
+libavfilter/avf_showvolume.c:static int activate(AVFilterContext *ctx)
+libavfilter/avf_showvolume.c:    .activate      = activate,
+grep: libavfilter/asrc_sinc.o: binary file matches
+grep: libavfilter/aeval.o: binary file matches
+grep: libavfilter/vf_displace.o: binary file matches
+grep: libavfilter/yadif_common.o: binary file matches
+grep: libavfilter/vf_median.o: binary file matches
+libavfilter/vf_lut2.c:static int activate(AVFilterContext *ctx)
+libavfilter/vf_lut2.c:    return ff_framesync_activate(&s->fs);
+libavfilter/vf_lut2.c:    .activate      = activate,
+libavutil/hwcontext_vulkan.c:     * semaphores from DRM. Otherwise we have to activate the semaphores.
+libpostproc/postprocess_internal.h:    int chromDefault;       ///< is chrominance filtering on by default if this filter is manually activated
+libpostproc/postprocess_internal.h:    int lumMode;                    ///< activates filters for luminance
+libpostproc/postprocess_internal.h:    int chromMode;                  ///< activates filters for chrominance
+LICENSE.md:configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
+LICENSE.md:the configure parameter `--enable-version3` will activate this licensing option
+grep: log.txt: input file is also the output
+tests/checkasm/sw_scale.c:                    // is deactivated as the SIMD functions do not give the same result as
+tests/checkasm/sw_scale.c:                    // the scalar ones due to rounding. The SIMD functions are activated by
+tests/api/api-h264-slice-test.c:        fprintf(stderr, "Couldn't activate slice threading: %d\n", c->active_thread_type);
+tools/bookmarklets.html:their link version in a bookmark, and later activate the bookmark on a page
